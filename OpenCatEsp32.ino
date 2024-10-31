@@ -6,8 +6,8 @@
 
 
 // #define BiBoard_V0_1  //ESP32 Board with 12 channels of built-in PWM for joints
-#define BiBoard_V0_2
-// #define BiBoard_V1_0
+// #define BiBoard_V0_2
+#define BiBoard_V1_0
 // #define BiBoard2  //ESP32 Board with 16 channels of PCA9685 PWM for joints
 //***********************
 
@@ -16,7 +16,7 @@
 
 // you can also activate the following modes (they will diable the gyro to save programming space)
 // allowed combinations: RANDOM_MIND + ULTRASONIC, RANDOM_MIND, ULTRASONIC, VOICE, CAMERA
-#define VOICE                     // Petoi Grove voice module
+// #define VOICE                     // Petoi Grove voice module
 #define ULTRASONIC                // for Petoi RGB ultrasonic distance sensor
 #define PIR                       // for PIR (Passive Infrared) sensor
 #define DOUBLE_TOUCH              // for double touch sensor
@@ -51,7 +51,7 @@ void loop() {
   //  //— read environment sensors (low level)
   readEnvironment();
   //  //— special behaviors based on sensor events
-  dealWithExceptions();  // low battery, fall over, lifted, etc.
+//  dealWithExceptions();  // low battery, fall over, lifted, etc.
   if (!tQueue->cleared()) {
     tQueue->popTask();
   } else {
