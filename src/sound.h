@@ -70,14 +70,14 @@ byte volumeTest[] = {
 };
 void beep(float note, float duration = 50, int pause = 0, byte repeat = 1) {
   if (soundState) {
-    for (byte r = 0; r < repeat; r++) {
-      if (note > 0) {
-        tone(BUZZER, BASE_PITCH * pow(1.05946, note), duration, buzzerVolume / amplifierFactor);
-      } else {
-        delay(duration);
-      }
-      delay(pause);
-    }
+//    for (byte r = 0; r < repeat; r++) {
+//      if (note > 0) {
+//        tone(BUZZER, BASE_PITCH * pow(1.05946, note), duration, buzzerVolume / amplifierFactor);
+//      } else {
+//        delay(duration);
+//      }
+//      delay(pause);
+//    }
   }
 }
 
